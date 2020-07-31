@@ -1,0 +1,46 @@
+.microphone-container {
+    position: absolute;
+    top: 5px;
+    right: 127px;
+    width: 30px;
+    height: 30px;
+}
+
+.microphone-container svg {
+    width: 20px;
+    height: 20px;
+}
+
+.microphone-container--active svg {
+    fill: #5d1049;
+}
+
+.microphone-container--active .pulse-ring {
+    display: block;
+    animation: pulsate infinite 1.2s;
+    -webkit-animation: pulsate infinite 1.2s;
+}
+
+.pulse-ring {
+    content: '';
+    display: none;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #5d1049;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        -webkit-transform: scale(1, 1);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1.2, 1.2);
+        opacity: 0;
+    }
+}

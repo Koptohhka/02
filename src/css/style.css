@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1030px;
+    padding: 0px 20px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 30px;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #F8BBD0;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.header {
+    background-color: #5d1049;
+    color: white;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title {
+    text-align: center;
+    font-weight: 300;
+}
+
+.main {
+    margin-bottom: 20px;
+}
+
+.main__search-field {
+    position: relative;
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.search-field__input {
+    outline: none;
+    height: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.123);
+    color: rgba(0, 0, 0, 0.87);
+    border-radius: 4px;
+    font-weight: medium;
+    background-color: transparent;
+    font-family: 'Raleway', sans-serif;
+    font-size: 19px;
+
+    flex-grow: 2;
+    padding-left: 24px;
+}
+
+.search-field__button {
+    outline: none;
+    display: block;
+    color: white;
+    background-color: #4E0D3A;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    width: 100px;
+    font-size: 19px;
+    margin-left: 15px;
+}
+
+.film-card-item {
+    width: 120px;
+}
+
+.film-card-item:first-child {
+    margin-left: 0px;
+}
+
+.film-card-item:last-child {
+    margin-right: 0px;
+}
+
+.film-card-item__image {
+    width: 100%;
+    height: 330px;
+}
+
+.swiper-button-prev {
+    position: absolute;
+}
+
+.footer {
+    background-color: #5d1049;
+    min-height: 50px;
+}
+
+.error-message {
+    color: rgb(182, 17, 17);
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 30px;
+}
+
+@import url("./swiper.css");
+@import url("./spiner.css");
+@import url("./full-film-card.css");
+@import url("./microphone.css");
+@import url("./virtual-keyboard.css");
