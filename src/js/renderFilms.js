@@ -4,7 +4,6 @@ import { prepareFilmsData, insertFilmCard, renderFilmsCardsMarkup, addEventListe
 const initFirstFilmsCardsRender = async () => {
     const data = await prepareFilmsData(newSwiper.currentSearchRequest, newSwiper.currentPageCounter);
     newSwiper.insertSwiperMarkup(renderFilmsCardsMarkup(data));
-    // insertFilmCard(renderFilmsCardsMarkup(data));
     newSwiper.initSwiper();
     addEventListenersToFilmCards(data);
 };

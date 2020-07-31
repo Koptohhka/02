@@ -3,12 +3,7 @@ import {
     getFilmsDataByTitle
 } from './services/filmsApiServices';
 import noPoster from '../assets/img/keep-calm-poster-not-found.png';
-import initKeyboard from './virtual-keyboard/virtual-keyboard';
-// import newSwiper from './api/swiper.js';
-// import 'swiper/swiper-bundle.css';
 import '../css/style.css';
-// import 'swiper/swiper-bundle.min.css'
-// import 'swiper/swiper-bundle.js';
 
 const prepareFilmsData = async (filmTitle, currentPageCounter) => {
     const filmsData = [];
@@ -58,8 +53,9 @@ const insertFilmCard = (markup) => {
 
 const addEventListenersToFilmCards = (filmsData) => {
     const showFilmInfoCard = (filmData) => {
-        const { Title, Poster, Year, Plot } = filmData;
-        document.getElementById('wrapper').insertAdjacentHTML('afterend', `<div id="full-film-card" class="full-film-card-wrapper"><div class="full-film-card"><img class="full-film-card__image" src="${Poster !== "N/A" ? Poster : noPoster}"><div class="full-film-card__info-container"><p class="full-film-card__title">${Title}</p><p class="full-film-card__realised">Realised: ${Year}</p><p class="full-film-card__cast">Lorem, ipsum.</p><p class="full-film-card__description">${Plot}</p></div></div></div>`);
+        console.log(filmData);
+        const { Title, Poster, Year, Plot, Actors } = filmData;
+        document.getElementById('wrapper').insertAdjacentHTML('afterend', `<div id="full-film-card" class="full-film-card-wrapper"><div class="full-film-card"><img class="full-film-card__image" src="${Poster !== "N/A" ? Poster : noPoster}"><div class="full-film-card__info-container"><p class="full-film-card__title">${Title}</p><p class="full-film-card__realised">Realised: ${Year}</p><p class="full-film-card__cast">${Actors}</p><p class="full-film-card__description">${Plot !== "N/A" ? Plot : 'No description'}</p></div></div></div>`);
     };
 
     const removeFilmInfoCard = (evt) => {
@@ -90,7 +86,6 @@ export {
 require('./renderFilms.js');
 require('./searchFilms.js');
 require('./api/speechRecognitionApi.js');
-// initKeyboard();
 
 
 
