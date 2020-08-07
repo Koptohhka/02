@@ -84,7 +84,6 @@ export {
 require('./renderFilms.js');
 require('./searchFilms.js');
 require('./api/speechRecognitionApi.js');
-// initKeyboard();
 
 
 
