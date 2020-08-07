@@ -4,6 +4,7 @@
   "description": "JavaScript task",
   "main": "index.js",
   "dependencies": {
+    "@babel/polyfill": "^7.10.4",
     "swiper": "^6.0.4"
   },
   "devDependencies": {

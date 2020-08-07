@@ -15,14 +15,13 @@
     margin: 0 auto;
     background-color: rgba(85, 79, 79, 0.568);
     display: flex;
-    min-height: 400px;
     z-index: 10;
+    height: 400px;
 }
 
 .full-film-card__image {
     display: block;
     width: 300px;
-    min-width: 300px;
 }
 
 .full-film-card__info-container {
@@ -51,4 +50,52 @@
 .full-film-card__description {
     line-height: 35px;
     text-align: left;
+    max-height: 179px;
+    overflow: auto;
+}
+
+@media (max-width: 760px) {
+    .full-film-card__info-container {
+        padding-top: 20px;
+        font-size: 17px;
+    }
+
+    .full-film-card {
+        width: 80%;
+        height: 350px;
+    }
+
+    .full-film-card__title {
+        font-size: 19px;
+    }
+
+    .full-film-card .full-film-card__description {
+        font-size: 16px;
+        max-height: 179px;
+        overflow: auto;
+    }
+
+    .full-film-card__image {
+        width: 250px;
+        /* min-width: 300px; */
+    }
+
+    @media(max-width: 600px) {
+        .full-film-card-wrapper {
+            padding-top: 170px;
+        }
+
+        .full-film-card {
+            height: 320px;
+        }
+
+        .full-film-card__image {
+            width: 200px;
+            /* min-width: 300px; */
+        }
+
+        .full-film-card .full-film-card__description {
+            max-height: 150px;
+        }
+    }
 }

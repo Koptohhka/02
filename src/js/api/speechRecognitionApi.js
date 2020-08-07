@@ -22,7 +22,6 @@ const changeEnabledSpeechFlag = (flag) => {
 microphone.addEventListener('click', () => {
     if (isSpeechButtonHandlerEnabled) {
         changeIsSearchButtonEnabledFlag(false);
-        console.log('clicked');
         changeEnabledSpeechFlag(false);
         recognition.start();
     }

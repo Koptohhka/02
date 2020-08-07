@@ -53,9 +53,9 @@ const insertFilmCard = (markup) => {
 
 const addEventListenersToFilmCards = (filmsData) => {
     const showFilmInfoCard = (filmData) => {
-        console.log(filmData);
         const { Title, Poster, Year, Plot, Actors } = filmData;
-        document.getElementById('wrapper').insertAdjacentHTML('afterend', `<div id="full-film-card" class="full-film-card-wrapper"><div class="full-film-card"><img class="full-film-card__image" src="${Poster !== "N/A" ? Poster : noPoster}"><div class="full-film-card__info-container"><p class="full-film-card__title">${Title}</p><p class="full-film-card__realised">Realised: ${Year}</p><p class="full-film-card__cast">${Actors}</p><p class="full-film-card__description">${Plot !== "N/A" ? Plot : 'No description'}</p></div></div></div>`);
+        console.log(filmData);
+        document.getElementById('wrapper').insertAdjacentHTML('afterend', `<div id="full-film-card" class="full-film-card-wrapper"><div class="full-film-card"><img class="full-film-card__image" src="${Poster !== "N/A" ? Poster : noPoster}"><div class="full-film-card__info-container"><p class="full-film-card__title">${Title}</p><p class="full-film-card__realised">Realised: ${Year}</p><p class="full-film-card__cast">Actors: ${Actors}</p><p class="full-film-card__description">${Plot}</p></div></div></div>`);
     };
 
     const removeFilmInfoCard = (evt) => {
@@ -64,8 +64,6 @@ const addEventListenersToFilmCards = (filmsData) => {
             document.removeEventListener('click', removeFilmInfoCard);
         }
     };
-
-    console.log(filmsData, 'here');
 
     document.querySelectorAll('.film-card-item--new-card').forEach((it, i) => {
         it.classList.remove('film-card-item--new-card');
@@ -86,6 +84,7 @@ export {
 require('./renderFilms.js');
 require('./searchFilms.js');
 require('./api/speechRecognitionApi.js');
+// initKeyboard();
 
 
 

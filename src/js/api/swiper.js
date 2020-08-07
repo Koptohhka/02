@@ -1,8 +1,3 @@
-// import Swiper, {
-//   Navigation,
-//   Pagination
-// } from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
-// import 'swiper/swiper-bundle.css';
 import { insertSpinnerToButton, removeSpinnerFromButton } from '../utils/utils';
 import {
   prepareFilmsData,
@@ -49,7 +44,11 @@ class MySwiper {
       slidesPerView: 4,
       spaceBetween: 20,
       breakpoints: {
-        500: {
+        320: {
+          slidesPerView: 1,
+          paceBetween: 'auto',
+        },
+        470: {
           slidesPerView: 2
         },
         722: {
